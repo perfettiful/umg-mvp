@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "45148923-5ade-4947-baff-842a920e94a2",
+		"name": "UMG_Codes_Routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Authorize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/api/authorize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"authorize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create Track",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/v1/api/isrc/track/GBAYE6700149",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"v1",
+						"api",
+						"isrc",
+						"track",
+						"GBAYE6700149"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Find Track by ISRC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/v1/api/isrc/track/GBAYE6700149",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"v1",
+						"api",
+						"isrc",
+						"track",
+						"GBAYE6700149"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Artists by Text Query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/v1/api/isrc/artists?search=The",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"v1",
+						"api",
+						"isrc",
+						"artists"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "The"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Artists by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/v1/api/isrc/artists?id=4tZwfgrHOc3mvqYlEYSvVi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"v1",
+						"api",
+						"isrc",
+						"artists"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4tZwfgrHOc3mvqYlEYSvVi"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

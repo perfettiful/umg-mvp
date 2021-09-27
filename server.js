@@ -18,8 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes)
 swaggerLoader(app);
 
-app.get("/", (req, res) = > {
-  res.status(200).json("message":"Welcome to our REST API. For full details on the resources avaiable, please read our documentation : /docs")
+app.get("/", (req, res) => {
+  res.status(200).json({"message":"Welcome to our REST API. For full details on the resources available, please read our documentation : /docs"})
 })
 
 sequelize.sync({ force: false }).then(() => {
