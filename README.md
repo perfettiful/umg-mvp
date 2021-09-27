@@ -48,9 +48,7 @@ Start server in developer mode
 npm run start:dev
 ```
 Read API documentation
-<a href="https://umg-mvp.herokuapp.com//docs" target="blank"><img align="center" src="/assets/swagger_docs" alt="perfettiful" height="60" width="60" /></a>
-
-Load Postman routes 
+<a href="https://umg-mvp.herokuapp.com//docs" target="blank"><img align="center" src="https://raw.githubusercontent.com/perfettiful/umg-mvp/main/assets/swagger_docs.png" alt="perfettiful"  /></a>
 
 <hr></hr>
 <h2 id="testing">🔬  Testing </h2>
@@ -58,6 +56,7 @@ Load Postman routes
 ```bash
 npm run test
 ```
+
 
 <hr></hr>
 <h2 id="deployment" >🚀  Deployment </h2>
