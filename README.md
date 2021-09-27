@@ -1,5 +1,13 @@
 <h1 align='center'> 🎹 UMG Spotify Audio Track REST API 🎹 </h1>
 
+<h3> 👇 View the Project on Github</h3> 
+
+[![GitHub](https://img.shields.io/github/stars/tterb/playmusic.svg?label=Views)](https://github.com/JonSnow/MyBadges)
+
+<h3> 👇 Read the API Docs on Heroku</h3> 
+
+[![View](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://umg-mvp.herokuapp.com/docs/)  
+
 <h2> Table of Contents</h2>
 
 - [Description](#description)
