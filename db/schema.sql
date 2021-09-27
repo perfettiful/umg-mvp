@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS isrc_db;
+CREATE DATABASE isrc_db;
