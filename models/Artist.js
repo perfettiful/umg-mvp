@@ -2,37 +2,45 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create our Traveller model
-class Traveller extends Model {}
+class Artist extends Model {}
 
 // create fields/columns for Traveller model
-Traveller.init(
+Artist.init(
   {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      unique: true
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    email: {
+    type: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true
-      }
+      allowNull: false
+    },
+    href: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    uri: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    external_urls: {
+      type: DataTypes.JSON,
+      allowNull: true
     }
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'traveller'
+    modelName: 'artist'
   }
 );
 
-module.exports = Traveller;
+module.exports = Artist;

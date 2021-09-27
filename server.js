@@ -1,5 +1,6 @@
 const express = require('express');
 const routes = require('./routes');
+const swaggerLoader = require('./swagger');
 const sequelize = require('./config/connection');
 const cors = require('cors');
 require("dotenv").config();
@@ -7,19 +8,16 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 7001;
 
-app.use(cors());
+const whiteList = process.env.CORS_WHITELIST.split(",")
+app.use(cors({
+  origin: whiteList
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// turn on routes
-app.use(routes);
+app.use(routes)
+swaggerLoader(app);
 
-app.get('/',(req,res) => {
-
-  res.json()
-})
-
-// turn on connection to db and server
-//sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('===> Listening on port: ', PORT));
-//});
+});

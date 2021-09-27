@@ -1,28 +1,29 @@
 swagger: "2.0"
-
 info:
-  description: "Backend REST API using Node, Express, and PostgreSQL"
-  version: "1.0.0"
-  title: "User Directory REST API"
+  description: "Backend REST API using Node, Express, Sequelize and MySql with Spotify API"
+  version: "1.0.1"
+  title: "🎹 UMG Spotify Track REST API"
   
 servers:
-  - url: http://api.example.com/v1
+  - url: https://api.umg.codes/v1/api
     description: Optional server description, e.g. Main (production) server
-  - url: http://staging-api.example.com
+  - url: https://api.umg.codes/v1/api
     description: Optional server description, e.g. Internal staging server for testing
 
 schemes: 
   - http
+  - https
 
-host: localhost:4000
+host: 
+  - localhost:7001
 
-basePath: "/"
+basePath: "/v1/api/isrc"
 
 paths:
-  /users:
+  /artists:
     get:
-      summary: "List user records"
-      description: "Lists all user records"
+      summary: "Search for artists by Spotify ID or query string"
+      description: "Get one artist by Spotify ID or  Get all artist by name matching a query string"
       produces:
         - "application/json"
       parameters:
@@ -37,24 +38,8 @@ paths:
           schema:
             type: object
             items:
-    post:
-      summary: "Create new user"
-      description: "Creates new user and adds it to the directory"
-      produces:
-        - "application/json"
-      parameters:
-      responses:
-        200:
-          description: 200 Success
-          schema:
-            type: object
-            items:
-        500:
-          description: 500 Internal Server Error
-          schema:
-            type: object
-            items:
-  /users/{userId}:
+    
+  /tracks/{isrcId}:
     get:
       summary: "Get user record"
       description: "Get a single user record by the user's ID"
@@ -72,7 +57,7 @@ paths:
           schema:
             type: object
             items:
-    put:
+    post:
       summary: "Update user record"
       description: "Update a user record based on the user's ID"
       produces:
@@ -89,20 +74,4 @@ paths:
           schema:
             type: object
             items:
-    delete:
-      summary: "Delete user record"
-      description: "Delete a user record based on the user's ID"
-      produces:
-        - "application/json"
-      parameters:
-      responses:
-        200:
-          description: 200 Success
-          schema:
-            type: object
-            items:
-        500:
-          description: 500 Internal Server Error
-          schema:
-            type: object
-            items:
+    

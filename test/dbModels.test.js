@@ -106,11 +106,3 @@ describe("Shopify API Client", () => {
     });
   });
 });
-
-// getSpotifyTracks(getSpotifyToken, "GBAYE6700149");
-// getSpotifyTracks(getSpotifyToken, "USQX91300108");
-// getSpotifyTracks(getSpotifyToken, "USVT10300001");
-// getSpotifyTracks(getSpotifyToken, "USEE10001992");
-// getSpotifyTracks(getSpotifyToken, "GBAYE0601498");
-// getSpotifyTracks(getSpotifyToken, "USWB11403680");
-// getSpotifyTracks(getSpotifyToken, "GBAYE0601477");

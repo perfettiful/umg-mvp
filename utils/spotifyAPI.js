@@ -46,15 +46,17 @@ getSpotifyTracks = async (getToken, isrcCode) => {
 
     //Search result items are already ordered by popularity, use first result in array
     let tracksData = {
-      spotifyId: tracksResponse.data.tracks.items[0].id,
+      isrc: isrcCode,
+      id: tracksResponse.data.tracks.items[0].id,
       title: tracksResponse.data.tracks.items[0].name,
       artists: tracksResponse.data.tracks.items[0].artists,
-      albumUrl: tracksResponse.data.tracks.items[0].album.images[0].url,
+      albumCoverUrl: tracksResponse.data.tracks.items[0].album.images[0].url,
     };
-    console.log("\n \n======================== \n")
-    console.log("+++> Insert into DB: \n", tracksData);
+    //console.log("\n \n======================== \n")
+    //console.log("+++> Insert into DB: \n", tracksData);
+    console.log(tracksData);
 
-    return tracksData.items;
+    return tracksData;
 
   } catch (error) {
     console.log(error);
@@ -62,11 +64,5 @@ getSpotifyTracks = async (getToken, isrcCode) => {
   }
 }; // end getSpotifyTracks fct def
 
-getSpotifyTracks(getSpotifyToken, "GBAYE6700149");
-getSpotifyTracks(getSpotifyToken, "USVT10300001");
-getSpotifyTracks(getSpotifyToken, "USEE10001992");
-getSpotifyTracks(getSpotifyToken, "GBAYE0601498");
-getSpotifyTracks(getSpotifyToken, "USWB11403680");
-getSpotifyTracks(getSpotifyToken, "GBAYE0601477");
 
 module.exports = { getSpotifyToken, getSpotifyTracks };
