@@ -1,4 +1,4 @@
-# 🎹 UMG Spotify Audio Track REST API 🎹 
+<h1 align='center'> 🎹 UMG Spotify Audio Track REST API 🎹 </h1>
 
 <h2> Table of Contents</h2>
 
@@ -38,8 +38,9 @@ git clone https://github.com/perfettiful/umg-mvp.git
 cd umg-mvp && cp .env.EXAMPLE ./.env && npm install
 ```
 ```bash
-cp .env.EXAMPLE ./.env
+npm run start:dev
 ```
+
 <hr></hr>
 <h2 id="testing">🔬  Testing </h2>
 
