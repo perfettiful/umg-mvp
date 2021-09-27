@@ -56,7 +56,8 @@ Read API documentation
 ```bash
 npm run test
 ```
-
+Load API test routes profile into Postman 
+<a href="https://github.com/perfettiful/umg-mvp/blob/main/UMG_Codes_Routes.postman_collection.json" target="blank"><img align="center" src="https://raw.githubusercontent.com/perfettiful/umg-mvp/main/assets/postman.png" alt="perfettiful"  /></a>
 
 <hr></hr>
 <h2 id="deployment" >🚀  Deployment </h2>
