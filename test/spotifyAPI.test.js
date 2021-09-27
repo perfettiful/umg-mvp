@@ -1,12 +1,11 @@
-const DayCare = require("../dayCare");
-const Child = require("../child");
+const { getSpotifyToken, getSpotifyTracks } = require("../utils/spotifyAPI");
 
-describe("DayCare", () => {
-  describe("Initialization", () => {
+describe("Shopify API Client", () => {
+  describe("Fetch API Client Auth Token", () => {
     it("should create an object with 'children' array, 'capacity' number, and 'ageLimit' number", () => {
       const dayCare = new DayCare();
 
-      // Verify that the new object has the correct properties
+      // Verify 
       expect(dayCare).toEqual({ children: [], capacity: 3, ageLimit: 6 });
     });
   });

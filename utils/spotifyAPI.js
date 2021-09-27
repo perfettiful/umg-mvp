@@ -1,4 +1,7 @@
-require("dotenv").config({ path: require("find-config")(".env") });
+require("dotenv").config({ 
+    path: require("find-config")(".env") 
+});
+
 const axios = require("axios");
 const btoa = require("btoa");
 const clientId = process.env.SPOTIFY_CLIENT_ID;
