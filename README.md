@@ -10,7 +10,7 @@
 - [About The Developer](#about)
 
 <h2 id="description" > 📝  Description</h2>
-<p></p>
+<p>Backend REST API using Node, Express, Sequelize and MySql with Spotify API</p>
 <hr></hr>
 <h2 id="technologies" >🏗 Technologies Used</h2>  
 
@@ -31,15 +31,26 @@
 <hr></hr>
 <h2 id="usage">🛠  Usage </h2>
 
+Clone the Repo
+
 ```bash
 git clone https://github.com/perfettiful/umg-mvp.git
 ```
+Install NPM dependencies and setup environment
+
 ```bash
 cd umg-mvp && cp .env.EXAMPLE ./.env && npm install
 ```
+
+Start server in developer mode
+
 ```bash
 npm run start:dev
 ```
+Read API documentation
+<a href="https://umg-mvp.herokuapp.com//docs" target="blank"><img align="center" src="/assets/swagger_docs" alt="perfettiful" height="60" width="60" /></a>
+
+Load Postman routes 
 
 <hr></hr>
 <h2 id="testing">🔬  Testing </h2>

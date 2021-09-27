@@ -2,7 +2,7 @@ swagger: "2.0"
 info:
   description: "Backend REST API using Node, Express, Sequelize and MySql with Spotify API"
   version: "1.0.1"
-  title: "🎹 UMG Spotify Track REST API"
+  title: "🎹 UMG Spotify Track REST API 🎹"
   
 servers:
   - url: https://api.umg.codes/v1/api

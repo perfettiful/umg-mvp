@@ -12,6 +12,7 @@ const whiteList = process.env.CORS_WHITELIST.split(",")
 app.use(cors({
   origin: whiteList
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
