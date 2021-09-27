@@ -20,7 +20,6 @@
     "find-config": "^1.0.0",
     "js-yaml": "^4.1.0",
     "mysql2": "^2.2.1",
-    "node-fetch": "^3.0.0",
     "pg": "^8.7.1",
     "sequelize": "^6.3.5",
     "swagger-jsdoc": "^6.1.0",
