@@ -2,7 +2,7 @@
 
 <h3> 👇 View the Project on Github</h3> 
 
-[![GitHub](https://img.shields.io/github/stars/tterb/playmusic.svg?label=Views)](https://github.com/JonSnow/MyBadges)
+[![GitHub](https://img.shields.io/github/stars/tterb/playmusic.svg?label=Views)](https://github.com/perfettiful/umg-mvp)
 
 <h3> 👇 Read the API Docs on Heroku</h3> 
 

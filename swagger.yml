@@ -41,8 +41,8 @@ paths:
     
   /tracks/{isrcId}:
     get:
-      summary: "Get user record"
-      description: "Get a single user record by the user's ID"
+      summary: "Get track record"
+      description: "Get a track record using ISRC code"
       produces:
         - "application/json"
       parameters:
@@ -58,8 +58,8 @@ paths:
             type: object
             items:
     post:
-      summary: "Update user record"
-      description: "Update a user record based on the user's ID"
+      summary: "Create track record"
+      description: "Update a track record using ISRC code""
       produces:
         - "application/json"
       parameters:
