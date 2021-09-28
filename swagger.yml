@@ -59,7 +59,7 @@ paths:
             items:
     post:
       summary: "Create track record"
-      description: "Update a track record using ISRC code""
+      description: "Update a track record using ISRC code"
       produces:
         - "application/json"
       parameters:

@@ -59,6 +59,7 @@ router.post("/track/:isrcId", async (req, res) => {
       console.log(newTrack);
       res.status(200).json(newTrack);
     } catch (newTrackErr) {
+      res.status(400).json({"message":`Track with ISRC Code ${isrcId} already exists.`});
       console.error(newTrackErr);
     }
   } catch (err) {
@@ -87,7 +88,7 @@ router.get("/track/:isrcId", async (req, res) => {
     artistArr.forEach(async (artist,index,array) => {
 
       try {
-        const findArtist = await Artist.findByPk(artist);
+        const findArtist = await Artist.findByPk(artist.id);
         searchTrack.artists.push(findArtist);
         console.log(findArtist);
 
