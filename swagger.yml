@@ -22,6 +22,7 @@ host:
 basePath: "/v1/api/isrc"
 
 paths:
+  
   /artists:
     get:
       summary: "Search for artists by Spotify ID or query string"
@@ -33,7 +34,7 @@ paths:
           name: search
           schema: 
             type: string
-            example: "Daft"
+            example: ""
             summary: ""
         - in: query
           name: id
