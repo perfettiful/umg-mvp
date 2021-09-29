@@ -2,7 +2,7 @@
 
 <h3> 👇 View the Project on Github</h3> 
 
-[![GitHub](https://img.shields.io/github/stars/tterb/playmusic.svg?label=Views)](https://github.com/perfettiful/umg-mvp)
+[![Repo Views](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/perfettiful/umg-mvp)](https://github.com/perfettiful/umg-mvp)
 
 <h3> 👇 Read the API Docs on Heroku</h3> 
 
