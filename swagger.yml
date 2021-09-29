@@ -15,7 +15,9 @@ schemes:
   - https
 
 host: 
-  - localhost:7001
+  - api.umg.codes
+ # - umg-mvp.herokuapp.com
+ # - localhost:7001
 
 basePath: "/v1/api/isrc"
 
@@ -23,10 +25,23 @@ paths:
   /artists:
     get:
       summary: "Search for artists by Spotify ID or query string"
-      description: "Get one artist by Spotify ID or  Get all artist by name matching a query string"
+      description: "Get one artist by Spotify ID or  Get all artist by name matching a query string \n\n `?search=` accepts a text string that will fuzzy match against artist names (Ex 'Daft' => 'Daft Punk', 'The' => 'The Beatles' and 'The White Stripes') \n `?id=` accepts the Spotify assigned ID of an artist (Ex '2cnMpRsOVqtPMfq7YiFE6K' => 'Van Halen')"
       produces:
         - "application/json"
       parameters:
+        - in: query
+          name: search
+          schema: 
+            type: string
+            example: "Daft"
+            summary: ""
+        - in: query
+          name: id
+          schema: 
+            type: string
+            example: "3yDIp0kaq9EFKe07X1X2rz"
+            summary: ""
+
       responses:
         200:
           description: 200 Success
@@ -39,13 +54,18 @@ paths:
             type: object
             items:
     
-  /tracks/{isrcId}:
+  /track/{isrcId}:
     get:
       summary: "Get track record"
       description: "Get a track record using ISRC code"
       produces:
         - "application/json"
       parameters:
+        - in: path
+          name: isrcId
+          schema:
+            type: string
+            example: "GBAYE0601498"
       responses:
         200:
           description: 200 Success
@@ -63,6 +83,11 @@ paths:
       produces:
         - "application/json"
       parameters:
+        - in: path
+          name: isrcId
+          schema:
+            type: string
+            example: "GBDUW0100003"
       responses:
         200:
           description: 200 Success

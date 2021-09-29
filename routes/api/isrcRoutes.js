@@ -37,7 +37,13 @@ router.post("/track/:isrcId", async (req, res) => {
   try {
     const spotifyMetaData = await getSpotifyTracks(getSpotifyToken, isrcId);
 
+    if (spotifyMetaData == null ) {
+      res.status(400).json({"message":`Track with ISRC Code ${isrcId} was not found.`});
+    }
+
     let artistArr = spotifyMetaData.artists;
+
+    console.log(spotifyMetaData, artistArr)
 
     artistArr.forEach(async (artist) => {
       try {
@@ -49,7 +55,7 @@ router.post("/track/:isrcId", async (req, res) => {
     });
 
     let idArray = artistArr.map((artist) => {
-      return artist.id;
+      return artist
     });
 
     spotifyMetaData.artists = idArray;
@@ -94,7 +100,7 @@ router.get("/track/:isrcId", async (req, res) => {
 
       } catch (findArtist) { 
         console.error(findArtist);
-        return
+        res.status(400).json({"message":"A track with that ISRC does not exist yet, please create it first"});
       }
 
     if(index === array.length - 1){
@@ -103,7 +109,7 @@ router.get("/track/:isrcId", async (req, res) => {
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json(err);
+    res.status(400).json({"message":"A track with that ISRC does not exist yet, please create it first"});
   }
 }); // end GET /track/:isrcId definition
 

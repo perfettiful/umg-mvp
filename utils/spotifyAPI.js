@@ -22,7 +22,7 @@ getSpotifyToken = async () => {
         headers: headers,
       }
     );
-
+    console.log("+++ Fetched Token: \n",tokenResponse.data.access_token)
     return tokenResponse.data.access_token;
 
   } catch (error) {
@@ -44,6 +44,14 @@ getSpotifyTracks = async (getToken, isrcCode) => {
       }
     );
 
+    console.log("\n \n======================== \n")
+    console.log("+++> Response from Spotify: \n", tracksResponse.data);
+
+    if (tracksResponse.data.tracks.items[0] < 1){
+      return null
+    }
+
+
     //Search result items are already ordered by popularity, use first result in array
     let tracksData = {
       isrc: isrcCode,
@@ -52,9 +60,9 @@ getSpotifyTracks = async (getToken, isrcCode) => {
       artists: tracksResponse.data.tracks.items[0].artists,
       albumCoverUrl: tracksResponse.data.tracks.items[0].album.images[0].url,
     };
-    //console.log("\n \n======================== \n")
-    //console.log("+++> Insert into DB: \n", tracksData);
-    console.log(tracksData);
+    console.log("\n \n======================== \n")
+    console.log("+++> Insert into DB: \n", tracksData);
+
 
     return tracksData;
 
@@ -64,13 +72,14 @@ getSpotifyTracks = async (getToken, isrcCode) => {
   }
 }; // end getSpotifyTracks fct def
 
- getSpotifyTracks(getSpotifyToken, "GBAYE6700149");
- getSpotifyTracks(getSpotifyToken, "USQX91300108");
- getSpotifyTracks(getSpotifyToken, "USVT10300001");
- getSpotifyTracks(getSpotifyToken, "USEE10001992");
- getSpotifyTracks(getSpotifyToken, "GBAYE0601498");
- getSpotifyTracks(getSpotifyToken, "USWB11403680");
- getSpotifyTracks(getSpotifyToken, "GBAYE0601477");
+
+ //getSpotifyTracks(getSpotifyToken, "GBAYE6700149");
+  //getSpotifyTracks(getSpotifyToken, "USQX91300108");
+//  getSpotifyTracks(getSpotifyToken, "USVT10300001");
+//  getSpotifyTracks(getSpotifyToken, "USEE10001992");
+//  getSpotifyTracks(getSpotifyToken, "GBAYE0601498");
+//  getSpotifyTracks(getSpotifyToken, "USWB11403680");
+//  getSpotifyTracks(getSpotifyToken, "GBAYE0601477");
 
 
 module.exports = { getSpotifyToken, getSpotifyTracks };
