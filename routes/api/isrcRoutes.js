@@ -63,10 +63,11 @@ router.post("/track/:isrcId", async (req, res) => {
     try {
       const newTrack = await Track.findOrCreate({ where: spotifyMetaData });
       console.log(newTrack);
-      res.status(200).json(newTrack);
+      return res.status(200).json(newTrack);
     } catch (newTrackErr) {
-      res.status(400).json({"message":`Track with ISRC Code ${isrcId} already exists.`});
       console.error(newTrackErr);
+      return res.status(400).json({"message":`Track with ISRC Code ${isrcId} already exists.`});
+      
     }
   } catch (err) {
     console.error(err);
