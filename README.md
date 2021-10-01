@@ -4,9 +4,9 @@
 
 [![GitHub](https://img.shields.io/github/stars/tterb/playmusic.svg?label=Views)](https://github.com/perfettiful/umg-mvp)
 
-<h3> 👇 Read the API Docs on Heroku</h3> 
+<h3> 👇 Read the Official API Docs</h3> 
 
-[![View](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://umg-mvp.herokuapp.com/docs/)  
+[![View](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://api.umg.codes/docs/)  
 
 <h2> Table of Contents</h2>
 
@@ -37,17 +37,35 @@
 ![](https://img.shields.io/badge/Swagger-32CD32?style=for-the-badge&logo=swagger&logoColor=black)
 
 <hr></hr>
-<h2 id="usage">🛠  Usage </h2>
+<h2 id="usage">🛠  Running Locally </h2>
 
 Clone the Repo
 
 ```bash
 git clone https://github.com/perfettiful/umg-mvp.git
 ```
-Install NPM dependencies and setup environment
+Install NPM dependencies and Add your credentials to `.env` environmental variables
 
 ```bash
 cd umg-mvp && cp .env.EXAMPLE ./.env && npm install
+```
+Run Tests to ensure connection to Spotify API
+```bash
+npm run test
+```
+
+Create a new instance of the DB to your local MySql Server
+```bash
+mysql -u root -p
+```
+
+```bash
+source db/schema.sql
+```
+
+Seed your local DB with example Tracks and Artists data
+```bash
+npm run seed
 ```
 
 Start server in developer mode
@@ -58,12 +76,7 @@ npm run start:dev
 Read API documentation
 <a href="https://umg-mvp.herokuapp.com//docs" target="blank"><img align="center" src="https://raw.githubusercontent.com/perfettiful/umg-mvp/main/assets/swagger_docs.png" alt="perfettiful"  /></a>
 
-<hr></hr>
-<h2 id="testing">🔬  Testing </h2>
 
-```bash
-npm run test
-```
 Load API test routes profile into Postman 
 <a href="https://github.com/perfettiful/umg-mvp/blob/main/UMG_Codes_Routes.postman_collection.json" target="blank"><img align="center" src="https://raw.githubusercontent.com/perfettiful/umg-mvp/main/assets/postman.png" alt="perfettiful"  /></a>
 

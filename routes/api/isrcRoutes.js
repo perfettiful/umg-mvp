@@ -37,8 +37,8 @@ router.post("/track/:isrcId", async (req, res) => {
   try {
     const spotifyMetaData = await getSpotifyTracks(getSpotifyToken, isrcId);
 
-    if (spotifyMetaData == null ) {
-      res.status(400).json({"message":`Track with ISRC Code ${isrcId} was not found.`});
+    if (spotifyMetaData == null) {
+      return res.status(400).json({"message":`Track with ISRC Code ${isrcId} was not found.`});
     }
 
     let artistArr = spotifyMetaData.artists;

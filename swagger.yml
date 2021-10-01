@@ -12,11 +12,12 @@ servers:
 
 schemes: 
   - https
+  - http
 
 host: 
-  - api.umg.codes
+ # - api.umg.codes
  # - umg-mvp.herokuapp.com
- # - localhost:7001
+  - localhost:7001
 
 basePath: "/v1/api/isrc"
 
@@ -79,7 +80,7 @@ paths:
             items:
     post:
       summary: "Create track record"
-      description: "Update a track record using ISRC code"
+      description: "Create a track record using ISRC code supplied as a request parameter \n (Ex try creating a record for one of these ISRC codes of Pink Floyd songs: `GBN9Y1600012`, `GBAYE7300322`,`GBAYE7300262`,`GBN9Y1600012`)"
       produces:
         - "application/json"
       parameters:

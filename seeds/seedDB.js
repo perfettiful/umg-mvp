@@ -8,7 +8,7 @@ const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
   await Artist.bulkCreate(artistSeedData);
-   //await Track.bulkCreate(trackSeedData);
+  await Track.bulkCreate(trackSeedData);
 
   process.exit(0);
 };

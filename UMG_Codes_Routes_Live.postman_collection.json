@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "199c360c-46cd-41a9-ad05-1825d33cc358",
+		"name": "UMG_Codes_Routes_Live",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Create Track",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.umg.codes/v1/api/isrc/track/GBN9Y1600012",
+					"protocol": "https",
+					"host": [
+						"api",
+						"umg",
+						"codes"
+					],
+					"path": [
+						"v1",
+						"api",
+						"isrc",
+						"track",
+						"GBN9Y1600012"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Find Track by ISRC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.umg.codes/v1/api/isrc/track/GBN9Y1600012",
+					"protocol": "https",
+					"host": [
+						"api",
+						"umg",
+						"codes"
+					],
+					"path": [
+						"v1",
+						"api",
+						"isrc",
+						"track",
+						"GBN9Y1600012"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Artists by Text Query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.umg.codes/v1/api/isrc/artists?search=Daft",
+					"protocol": "https",
+					"host": [
+						"api",
+						"umg",
+						"codes"
+					],
+					"path": [
+						"v1",
+						"api",
+						"isrc",
+						"artists"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Daft"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Artists by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.umg.codes/v1/api/isrc/artists?id=4tZwfgrHOc3mvqYlEYSvVi",
+					"protocol": "https",
+					"host": [
+						"api",
+						"umg",
+						"codes"
+					],
+					"path": [
+						"v1",
+						"api",
+						"isrc",
+						"artists"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4tZwfgrHOc3mvqYlEYSvVi"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

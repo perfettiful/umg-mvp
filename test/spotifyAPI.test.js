@@ -1,19 +1,15 @@
 const { getSpotifyToken, getSpotifyTracks } = require("../utils/spotifyAPI");
 
-// describe("Spotify API Client", () => {
-//   describe("Fetch API Client Auth Token", () => {
-//     it("should send a request to Spotify API, to return an auth token string", () => {
+test("Fetch API Client Auth Token", async () => {
+  const authToken = await getSpotifyToken();
 
-//       // Verify 
-//       expect(getSpotifyToken()).toBeDefined();
-//     });
-//   });
+  expect(authToken).toHaveLength(83);
+});
 
+test("Authorized Fetch Track Data with ISRC Code", async () => {
 
-// });
+  const spotifyISRCResponse = await getSpotifyTracks(getSpotifyToken, "GBN9X1600031");
+  const spotifyReponseISRC = spotifyISRCResponse.isrc;
 
-//  getSpotifyTracks(getSpotifyToken, "USVT10300001");
-//  getSpotifyTracks(getSpotifyToken, "USEE10001992");
-//  getSpotifyTracks(getSpotifyToken, "GBAYE0601498");
-//  getSpotifyTracks(getSpotifyToken, "USWB11403680");
-//  getSpotifyTracks(getSpotifyToken, "GBAYE0601477");
+  expect(spotifyReponseISRC).toBe('GBN9X1600031');
+});
