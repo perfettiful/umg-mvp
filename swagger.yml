@@ -12,11 +12,11 @@ servers:
 
 schemes: 
   - https
-  #- http
+  - http
 
 host: 
-  - api.umg.codes
- # - umg-mvp.herokuapp.com
+ # - api.umg.codes
+  - umg-mvp.herokuapp.com
  # - localhost:7001
 
 basePath: "/v1/api/isrc"
