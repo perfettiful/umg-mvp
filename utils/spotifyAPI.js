@@ -51,7 +51,6 @@ getSpotifyTracks = async (getToken, isrcCode) => {
       return null
     }
 
-
     //Search result items are already ordered by popularity, use first result in array
     let tracksData = {
       isrc: isrcCode,
@@ -62,7 +61,6 @@ getSpotifyTracks = async (getToken, isrcCode) => {
     };
     console.log("\n \n======================== \n")
     console.log("+++> Insert into DB: \n", tracksData);
-
 
     return tracksData;
 

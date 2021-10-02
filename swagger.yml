@@ -12,7 +12,7 @@ servers:
 
 schemes: 
   - https
-  - http
+  #- http
 
 host: 
   - api.umg.codes
@@ -66,7 +66,7 @@ paths:
           name: isrcId
           schema:
             type: string
-            example: "USMTD1811184"
+            example: "USQX91300108"
       responses:
         200:
           description: 200 Success
@@ -80,7 +80,7 @@ paths:
             items:
     post:
       summary: "Create track record"
-      description: "Create a track record using ISRC code supplied as a request parameter \n (Ex try creating a record for one of these ISRC codes of Pink Floyd songs: `GBN9Y1600012`, `GBAYE7300322`,`GBAYE7300262`)"
+      description: "Create a track record using ISRC code supplied as a request parameter \n (Ex try creating a new record for the ISRC code of these songs: `USEE10001992`, `GBAYE6700149`,`USWB11403680`)"
       produces:
         - "application/json"
       parameters:

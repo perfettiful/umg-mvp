@@ -50,10 +50,11 @@ router.post("/track/:isrcId", async (req, res) => {
         const newArtist = await Artist.findOrCreate({ where: artist });
         console.log(newArtist);
       } catch (newArtistErr) {
-        console.error(newArtistErr);
+        console.error("-- Error: \n",newArtistErr);
       }
     });
 
+    
     let idArray = artistArr.map((artist) => {
       return artist
     });
