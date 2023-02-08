@@ -1,12 +1,4 @@
-<h1 align='center'> 🎹 UMG Spotify Audio Track REST API 🎹 </h1>
-
-<h3> 👇 View the Project on Github</h3> 
-
-[![Repo Views](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/perfettiful/umg-mvp)](https://github.com/perfettiful/umg-mvp)
-
-<h3> 👇 Read the Official API Docs</h3> 
-
-[![View](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://api.umg.codes/docs/)  
+<h1 align='center'> 🎹 Spotify Audio Track REST API 🎹 </h1>
 
 <h2> Table of Contents</h2>
 
