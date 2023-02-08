@@ -85,18 +85,3 @@ Load API test routes profile into Postman
 [⁉️ Create An Issue](https://github.com/perfettiful/umg-mvp)
 
 </div>
-
-<hr></hr>
-<h2 id="about"> 👨🏻‍💻 Developed By </h2>
-<a  align="center" href='https://github.com/perfettiful' targe='_blank'>
-<img src="https://github.com/perfettiful/perfettiful/blob/main/github-banner.png?raw=true" alt="banner that says Nathan Perfetti - software developer and educator">
-<span align="center"> <img height='150px' src='https://raw.githubusercontent.com/perfettiful/mern-folio/main/public/NatePerfetti.png' alt="perfettiful" /> </span>
-<span align="center"> <img height='150px' src='https://github-readme-stats.vercel.app/api?username=perfettiful&show_icons=true&theme=react ' alt="perfettiful" /> </span>
-</a>
-<hr></hr>
- <h2 align="left">📲 Connect with Me</h2>
-<p align="center" style='backgroud-color:white'>
-<a href="https://github.com/perfettiful" target="blank"><img align="center" src="https://s18955.pcdn.co/wp-content/uploads/2018/02/github.png" alt="perfettiful" height="60" width="60" /></a>
-<a href="https://nathanperfetti.dev" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="perfettiful" height="60" width="80" /></a>
-<a href="https://linkedin.com/in/nperfetti" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="perfettiful" height="60" width="80" /></a>
-</p>
